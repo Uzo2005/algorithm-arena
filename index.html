@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Needle and Threads</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+      .threadChild {
+        position: relative;
+      }
+      #threadContainer > *:not(:last-child)::before {
+        content: "";
+        transform-origin: bottom left;
+        transform: rotate(90deg);
+        position: absolute;
+        bottom: 0;
+        width: 40px;
+        border-top: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="display: flex; justify-content: center; background-color: #c9c95b"
+    >
+      <h3>Welcome To Needle And Threads</h3>
+      <img src="./logo.png" alt="Needle and thread logo" />
+    </div>
+
+    <h5 style="display: flex; justify-content: center">
+      Tell Us What Is On Your Mind
+    </h5>
+    <div id="threadContainer">
+      <div class="threadTitle" style="margin-top: 20px">
+        <textarea
+          name=""
+          id="titleText"
+          cols="20"
+          rows="3"
+          placeholder="What is the title of this thread"
+          style="width: 90%; height: 30px; resize: none; border: 2px solid black; "
+        ></textarea>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0 0px 0px;
+      "
+    >
+      <button
+        id="shareThread"
+        style="border-radius: 0; border: 1px solid black; cursor: pointer"
+      >
+        Share This Thread Of Thought
+      </button>
+
+      <button
+        id="createThread"
+        style="border-radius: 0; border: 1px solid black; cursor: pointer"
+      >
+        Add another box
+      </button>
+    </div>
+
+    <div class="hidden" id="linkBox" style="margin-top: 20px; background-color: green; border: 1px solid black; height: fit-content; display: flex; justify-content: center; align-items: center; padding: 20px;"></div>
+    <script defer src="./client.js"></script>
+
+
+  </body>
+</html>
